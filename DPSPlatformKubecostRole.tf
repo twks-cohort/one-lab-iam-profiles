@@ -17,10 +17,10 @@ resource "aws_iam_policy" "DPSPlatformKubecostRolePolicy" {
   path = "/"
 
   policy = jsonencode({
-    "Version": "2012-10-17"
-    "Statement": [
+    "Version" : "2012-10-17"
+    "Statement" : [
       {
-        "Action": [
+        "Action" : [
           "athena:*",
           "glue:GetDatabase*",
           "glue:GetTable*",
@@ -44,8 +44,8 @@ resource "aws_iam_policy" "DPSPlatformKubecostRolePolicy" {
           "iam:*",
           "logs:*"
         ]
-        "Effect": "Allow"
-        "Resource": "*"
+        "Effect" : "Allow"
+        "Resource" : "*"
       },
     ]
   })

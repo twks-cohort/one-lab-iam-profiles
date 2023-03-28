@@ -17,10 +17,10 @@ resource "aws_iam_policy" "DPSPlatformAWSCloudwatchBaseRolePolicy" {
   path = "/"
 
   policy = jsonencode({
-    "Version": "2012-10-17"
-    "Statement": [
+    "Version" : "2012-10-17"
+    "Statement" : [
       {
-        "Action": [
+        "Action" : [
           "kms:Create*",
           "kms:Decrypt",
           "kms:DescribeKey",
@@ -57,8 +57,8 @@ resource "aws_iam_policy" "DPSPlatformAWSCloudwatchBaseRolePolicy" {
           "xray:GetTraceSummaries",
           "xray:BatchGetTraces"
         ]
-        "Effect": "Allow"
-        "Resource": "*"
+        "Effect" : "Allow"
+        "Resource" : "*"
       },
     ]
   })
